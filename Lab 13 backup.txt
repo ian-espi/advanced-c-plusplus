@@ -1,0 +1,71 @@
+Lab 13
+// Ian Espinosa
+// CECS 282 LAB 13
+#include <iostream>
+#include <fstream>
+#include <cmath>//for ceiling
+#include <iomanip> //formatting output
+using namespace std;
+
+int main()
+{
+	const int SIZE = 12;
+	int rain [SIZE];
+	inputRainFall(int rainFall[], int SIZE);
+	
+	ofstream out("table.txt"); //display as a table
+	for (int i = 0; i < ROWS; i++)
+	{
+    		for (int j = 1; j < COLS; j++)
+		{
+        		out << i <<'x' << j << '=' << i * j << endl;
+			cout << setw(4) << right << j * i;
+    		}
+    		cout << '\n' << endl;	
+	}
+	
+void inputRainFall(int rainFall[], int size);
+{
+	ifstream inputFile;
+	inputFile.open("rainfall.txt"); //install in same folder as the cpp files, copy it into notepad
+	int month = 0; //first month
+	for (int month = 0; month < size; month++)
+	{
+		inputFile>>rainFall[month];
+	}
+	inputFile.close();
+}
+
+string month[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
+
+//Formatting Output
+//setw(int) manipulator
+
+//int x = 10;
+//cout<<setw(5)<<x<<x; // _ _ _ 1 0 1 0
+//cout<<setw(5)<<x<<setw(5)<<x; // _ _ _ 1 0 _ _ _ 1 0
+
+
+//ceil(double x)
+//ceil(2.3) 3
+//ceil(-2.2) //-2
+
+int calculateAverageRainFall(int rainFall [], int size);
+{
+	ifstream inputFile;
+	inputFile.open("rainfall.txt");
+	int rainFall [];
+	for (int rainFall []; rain)
+}
+
+void classifyAndDisplayRainfall(int rainFall[], int months);
+
+cout<<"The year's average monthly rainfall was "<<average_rain<<"."endl;
+cout<<highest_month<<" has the highest rainfall ("<<highest_rain<<")."<<endl;
+cout<<lowest_month<<" has the lowest rainfall ("<<lowest_rain<<")."<<endl;
+cout<<"Month      Rainfall(mm)   Classification"<<endl;
+cout<<"-------      ---------------      --------------"<<endl;
+cout<<"    "<<month_number<<"                  	"<<rainfall<<"                   "<<classification<<endl;
+cout<<"Month      Rainfall(mm)   Classification"<<endl;
+cout<<"-------      ---------------      --------------"<<endl;
+cout<<"    "<<month_number<<"                  	"<<rainfall<<"                   "<<classification<<endl;
